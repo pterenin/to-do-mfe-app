@@ -6,29 +6,31 @@ This project is a microfrontend (MFE) that implements a Todo List application us
 
 ## Setup Instructions
 
+1. Clone the repository. Two subfolders will be availible:
+- **ToDoApp** - MFE  MFE Todo list App
+- **host** - Host app to test MFE integration
+   
 ### Setup MFE Todo list App
 
-1. Clone the repository.
-2. Navigate to the `ToDoApp` directory.
-3. Install the dependencies:
+1. Navigate to the `ToDoApp` directory.
+2. Install the dependencies:
    `npm install`
-4. Run the App
+3. Run the App
    `npm run start`
-5. In browser navigate to `http://localhost:5037` to see the app without host app.
+4. In browser navigate to `http://localhost:5037` to see the app without host app.
 
-6. Run unit tests the APP
+5. Run unit tests the APP
    `npm run test`
 
 ### Setup Host App
 
-1. Clone the repository.
-2. Navigate to the `host` directory.
-3. Install the dependencies:
+1. Navigate to the `host` directory.
+2. Install the dependencies:
    `npm install`
-4. Run the App
+3. Run the App
    `npm run start`
-5. Make sure that MFE Todo list App is running as well on 5037 port.
-6. In browser navigate to `http://localhost:5038` to see the host app with TODO list integrated as a MFE.
+4. Make sure that MFE Todo list App is running as well on 5037 port.
+5. In browser navigate to `http://localhost:5038` to see the host app with TODO list integrated as a MFE.
 
 ## Design and Architectural Choices
 
