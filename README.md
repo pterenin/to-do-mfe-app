@@ -4,6 +4,8 @@
 
 This project is a microfrontend (MFE) that implements a Todo List application using React and TypeScript. The MFE can be integrated into any host application using Webpack 5 Module Federation.
 
+<img width="921" alt="Screenshot 2024-06-02 at 2 51 36 PM" src="https://github.com/pterenin/to-do-mfe-app/assets/17990616/c6e9c60d-80c4-4336-8b6a-4b892f55b4c6">
+
 ## Setup Instructions
 
 1. Clone the repository. Two subfolders will be availible:
@@ -22,8 +24,6 @@ This project is a microfrontend (MFE) that implements a Todo List application us
 5. Run unit tests the APP
    `npm run test`
 
-<img width="921" alt="Screenshot 2024-06-02 at 2 51 36 PM" src="https://github.com/pterenin/to-do-mfe-app/assets/17990616/c6e9c60d-80c4-4336-8b6a-4b892f55b4c6">
-
 
 ### Setup Host App
 
@@ -34,6 +34,7 @@ This project is a microfrontend (MFE) that implements a Todo List application us
    `npm run start`
 4. Make sure that MFE Todo list App is running as well on 5037 port.
 5. In browser navigate to `http://localhost:5038` to see the host app with TODO list integrated as a MFE.
+
 
 ## Design and Architectural Choices
 
