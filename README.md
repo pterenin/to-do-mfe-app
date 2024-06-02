@@ -72,7 +72,7 @@ In the host app import the MFE:
 ```
 import TodoApp from "todo/TodoApp";
 ```
-Now use `<TodoApp />` to render.
+Now use `<TodoApp />` to render the MFE in the Host app.
 
 
 
