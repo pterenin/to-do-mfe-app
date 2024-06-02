@@ -32,15 +32,15 @@ This project is a microfrontend (MFE) that implements a Todo List application us
 
 ## Design and Architectural Choices
 
-**TypeScript:** Used for type safety and maintainability.
-**React:** Used for building the user interface.
-**Tailwing:** Used for simple styling
-**Module Federation:** Used to enable the MFE to be integrated into a host application.
-**LocalStorage:** Used to persist todo items across page refreshes and sessions.
-**Component-based Architecture:** The application is divided into small, reusable components.
-**Error Handling:** LocalStorage errors and validation are handled gracefully
-**Unit Testing:** Unit testing done with react-testing, jest frameworks
-**Eslint:** Eslint is implemented to make sure code quality
+- **TypeScript:** Used for type safety and maintainability.
+- **React:** Used for building the user interface.
+- **Tailwing:** Used for simple styling
+- **Module Federation:** Used to enable the MFE to be integrated into a host application.
+- **LocalStorage:** Used to persist todo items across page refreshes and sessions.
+- **Component-based Architecture:** The application is divided into small, reusable components.
+- **Error Handling:** LocalStorage errors and validation are handled gracefully
+- **Unit Testing:** Unit testing done with react-testing, jest frameworks
+- **Eslint:** Eslint is implemented to make sure code quality
 
 ## Microfrontend Architecture
 
