@@ -18,40 +18,43 @@ This project is a Host App to integrate a microfrontend (MFE) using Webpack Moda
 
 ## Design and Architectural Choices
 
-TypeScript: Used for type safety and maintainability.
-React: Used for building the user interface.
-Module Federation: Used to enable the MFE to be integrated into a host application.
-LocalStorage: Used to persist todo items across page refreshes and sessions.
-Component-based Architecture: The application is divided into small, reusable components.
-Error Handling: LocalStorage errors and validation are handled gracefully
-Unit Testing: Unit testing done with react-testing, jest frameworks
+- **TypeScript:** Used for type safety and maintainability.
+- **React:** Used for building the user interface.
+- **Tailwing:** Used for simple styling
+- **Module Federation:** Used to enable the MFE to be integrated into a host application.
+- **Component-based Architecture:** The application is divided into small, reusable components.
 
 ## Microfrontend Architecture
 
-For microfrontend integration Module Federation plagin is selected.
+For microfrontend integration Module Federation plagin is used.
 
-webpack.config.js:
+webpack.config.js in MFE app:
 
-`````
+```
 ...
 exposes: {
         "./TodoApp": "./src/components/TodoMain",
       },
 ...
-````
-To test microfrontend integration in a host app it should have Module Federation plagin installed.
-In the webpack.config.js of the host app use the following:
-
 ```
 
+
+webpack.config.js in the host app
+
+```
+...
 filename: "remoteEntry.js",
 remotes: {
 todo: "todo@http://localhost:5037/remoteEntry.js",
 },
+...
 ```
 In the host app import the MFE:
+
 ```
 import TodoApp from "todo/TodoApp";
 ```
-Now use `<TodoApp />` to render.
-`````
+Now use `<TodoApp />` to render the MFE in the Host app.
+
+
+
