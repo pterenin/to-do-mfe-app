@@ -46,7 +46,7 @@ This project is a microfrontend (MFE) that implements a Todo List application us
 
 ## Microfrontend Architecture
 
-For microfrontend integration Module Federation plagin is selected.
+For microfrontend integration Module Federation plagin is used.
 
 webpack.config.js:
 
