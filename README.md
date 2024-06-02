@@ -8,11 +8,11 @@ This project is a microfrontend (MFE) that implements a Todo List application us
 
 ## Setup Instructions
 
-1. Clone the repository. Two subfolders will be availible:
+#### 1. Clone the repository. Two subfolders will be availible:
 - **ToDoApp** - Microdrontend Todo App
 - **host** - Host app to test MFE integration
    
-### Setup MFE Todo list App
+#### 2. Setup MFE Todo list App
 
 1. Navigate to the `ToDoApp` directory.
 2. Install the dependencies:
@@ -25,7 +25,7 @@ This project is a microfrontend (MFE) that implements a Todo List application us
    `npm run test`
 
 
-### Setup Host App
+#### 3. Setup Host App
 
 1. Navigate to the `host` directory.
 2. Install the dependencies:
