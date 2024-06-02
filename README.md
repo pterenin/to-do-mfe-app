@@ -7,7 +7,7 @@ This project is a microfrontend (MFE) that implements a Todo List application us
 ## Setup Instructions
 
 1. Clone the repository. Two subfolders will be availible:
-- **ToDoApp** - MFE  MFE Todo list App
+- **ToDoApp** - Microdrontend Todo App
 - **host** - Host app to test MFE integration
    
 ### Setup MFE Todo list App
