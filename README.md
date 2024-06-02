@@ -2,19 +2,20 @@
 
 ## Overview
 
-This project is a Host App to integrate a microfrontend (MFE) using Webpack Modal Federation. This APP has limited functionality and created only to test MFE integration
+This project is a microfrontend (MFE) that implements a Todo List application using React and TypeScript. The MFE can be integrated into any host application using Webpack 5 Module Federation.
 
 ## Setup Instructions
 
 1. Clone the repository.
-2. Navigate to the `host` directory.
+2. Navigate to the `ToDoApp` directory.
 3. Install the dependencies:
    `npm install`
 4. Run the App
    `npm run start`
-5. Run MFE app on 5037 port
-   Follow instruction in MFE README.md
-6. In browser navigate to `http://localhost:5038` to see the app with TODO list integrated as a MFE.
+5. In browser navigate to `http://localhost:5037` to see the app
+
+6. Run unit tests the APP
+   `npm run test`
 
 ## Design and Architectural Choices
 
@@ -55,3 +56,5 @@ import TodoApp from "todo/TodoApp";
 ```
 Now use `<TodoApp />` to render.
 `````
+
+
