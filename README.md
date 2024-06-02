@@ -22,6 +22,9 @@ This project is a microfrontend (MFE) that implements a Todo List application us
 5. Run unit tests the APP
    `npm run test`
 
+<img width="921" alt="Screenshot 2024-06-02 at 2 51 36 PM" src="https://github.com/pterenin/to-do-mfe-app/assets/17990616/c6e9c60d-80c4-4336-8b6a-4b892f55b4c6">
+
+
 ### Setup Host App
 
 1. Navigate to the `host` directory.
