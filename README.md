@@ -95,7 +95,7 @@ const TodoApp = lazy(() =>
 );
 ```
 
-It uses `ErrorBoundary` to catch render errors
+It uses `ErrorBoundary` to catch render errors.
 It uses `Suspense` to provide a loading state while the microfrontend is being loaded.
 
 ```
