@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MAX_DESCRIPTION_LENGTH } from "../../constants";
 
 interface TodoInputProps {
   addTodo: (description: string) => void;
@@ -31,6 +32,7 @@ const TodoInput: React.FC<TodoInputProps> = ({ addTodo }) => {
         className="w-full px-4 py-2 mr-2 border rounded-lg border-gray-300 focus:outline-none focus:border-blue-500"
         value={description}
         placeholder="Add a new task"
+        maxLength={MAX_DESCRIPTION_LENGTH}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
