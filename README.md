@@ -40,6 +40,10 @@ Two subfolders will be availible:
 
 <img width="921" alt="Screenshot 2024-06-02 at 2 51 36 PM" src="https://github.com/pterenin/to-do-mfe-app/assets/17990616/c6e9c60d-80c4-4336-8b6a-4b892f55b4c6">
 
+#### Error Handeling (MFE failed to load or render):
+
+<img width="909" alt="Screenshot 2024-06-03 at 9 14 14 AM" src="https://github.com/pterenin/to-do-mfe-app/assets/17990616/eea7ccec-3715-4145-a60b-97bfe73444bf">
+
 ## Design and Architectural Choices
 
 - **TypeScript:** Used for type safety and maintainability.
