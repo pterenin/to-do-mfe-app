@@ -4,15 +4,16 @@
 
 This project is a microfrontend (MFE) that implements a Todo List application using React and TypeScript. The MFE can be integrated into any host application using Webpack 5 Module Federation.
 
-
 ## Setup Instructions
 
-#### 1. Clone the repository. 
+#### 1. Clone the repository.
+
 `git clone https://github.com/pterenin/to-do-mfe-app.git`
 Two subfolders will be availible:
+
 - **ToDoApp** - Microdrontend Todo App
 - **host** - Host app to test MFE integration
-   
+
 #### 2. Setup MFE Todo list App
 
 1. Navigate to the `ToDoApp` directory.
@@ -24,7 +25,6 @@ Two subfolders will be availible:
 
 5. Run unit tests the APP
    `npm run test`
-
 
 #### 3. Setup Host App
 
@@ -54,7 +54,9 @@ Two subfolders will be availible:
 
 ## Microfrontend Architecture
 
-For microfrontend integration Module Federation plagin is used.
+#### Microfrontend TodoApp
+
+For microfrontend integration **Webpack Module Federation** plagin is used.
 
 webpack.config.js:
 
@@ -66,8 +68,12 @@ exposes: {
 ...
 ```
 
-To test microfrontend integration in a host app it should have Module Federation plagin installed.
-In the webpack.config.js of the host app use the following:
+#### Host App
+
+To test microfrontend integration in a host app it should have **Webpack Module Federation** plagin installed.
+In the `webpack.config.js` of the host app use the following:
+
+webpack.config.js
 
 ```
 ...
@@ -77,12 +83,25 @@ todo: "todo@http://localhost:5037/remoteEntry.js",
 },
 ...
 ```
-In the host app import the MFE:
+
+In the host app **TodoAppLoader** component is used to load the Todo MFE.
+This component uses `React.lazy` to dynamically import the TodoApp microfrontend and handle errors during the import process.
 
 ```
-import TodoApp from "todo/TodoApp";
+const TodoApp = lazy(() =>
+  import("todo/TodoApp").catch(() => ({
+    default: () => ErrorText,
+  }))
+);
 ```
-Now use `<TodoApp />` to render the MFE in the Host app.
 
+It uses `ErrorBoundary` to catch render errors
+It uses `Suspense` to provide a loading state while the microfrontend is being loaded.
 
-
+```
+  <ErrorBoundary fallback={ErrorText}>
+      <Suspense fallback={<p className="text-center">Loading ToDoApp...</p>}>
+        <TodoApp />
+      </Suspense>
+    </ErrorBoundary>
+```

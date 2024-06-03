@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Layout from "./components/Layout";
+import HostApp from "./components/HostApp";
 
 import "./index.scss";
 
-const App = () => <Layout />;
+const App = () => <HostApp />;
 const rootElement = document.getElementById("app");
 if (!rootElement) throw new Error("Failed to find the root element");
 

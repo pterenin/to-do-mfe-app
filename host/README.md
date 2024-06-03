@@ -38,7 +38,6 @@ exposes: {
 ...
 ```
 
-
 webpack.config.js in the host app
 
 ```
@@ -49,12 +48,25 @@ todo: "todo@http://localhost:5037/remoteEntry.js",
 },
 ...
 ```
-In the host app import the MFE:
+
+In the host app **TodoAppLoader** component is used to load the Todo MFE.
+This component tries to load the Todo MFE with `React.lazy` to dynamically import the TodoApp microfrontend and handle errors during the import process.
 
 ```
-import TodoApp from "todo/TodoApp";
+const TodoApp = lazy(() =>
+  import("todo/TodoApp").catch(() => ({
+    default: () => ErrorText,
+  }))
+);
 ```
-Now use `<TodoApp />` to render the MFE in the Host app.
 
+It uses `ErrorBoundary` to catch render errors
+It uses `Suspense` to provide a loading state while the microfrontend is being loaded.
 
-
+```
+  <ErrorBoundary fallback={ErrorText}>
+      <Suspense fallback={<p className="text-center">Loading ToDoApp...</p>}>
+        <TodoApp />
+      </Suspense>
+    </ErrorBoundary>
+```

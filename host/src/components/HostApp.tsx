@@ -1,16 +1,15 @@
 import React from "react";
 import Header from "./Header";
+import TodoAppLoader from "./TodoAppLoader";
 
-import TodoApp from "todo/TodoApp"; // import Micro Frontend ToDoMain
-
-const Layout = () => {
+const HostApp = () => {
   return (
     <>
       <Header />
       <p className="m-auto items-center max-w-3xl pl-0 p-4">Host App Content</p>
-      <TodoApp />
+      <TodoAppLoader />
     </>
   );
 };
 
-export default Layout;
+export default HostApp;
